@@ -1,15 +1,17 @@
+import CalculateScore from '../lib/InvisibilityEvents';
+
 async function handler(event: any) {
   try {
-    let invisible = {} as any;
+    let calculate = new CalculateScore();
     switch (event.httpMethod) {
       case 'POST':
-        return await invisible.calculate(event);
+        return await calculate.register(event);
       case 'GET':
-        return await invisible.calculate(event);
+        return await calculate.get(event);
       case 'PATCH':
-        return await invisible.calculate(event);
+        return await calculate.update(event);
       //   case 'DELETE':
-      //     return await invisible.calculate(event);
+      //     return await calculate.calculate(event);
 
       default:
         return {

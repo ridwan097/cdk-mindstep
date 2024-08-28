@@ -8,12 +8,13 @@
   "scripts": {
     "start:local": "npm run cdk:synth && npm run start:sam",
     "start:sam": "sam local start-api -t ./cdk.out/CdkMindstepStack.template.json",
-    "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
     "cdk:synth": "cdk synth",
-    "local": "npx tsc && npx aws-cdk synth && sam local start-api -t ./cdk.out/CdkMindstepStack.template.json"
+    "local": "npx tsc && npx aws-cdk synth && sam local start-api -t ./cdk.out/CdkMindstepStack.template.json",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.132",

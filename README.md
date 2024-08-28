@@ -16,3 +16,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ## Project generation
 
 - Initialize the project `cdk init app --language typescript`
+
+## Troubleshooting
+
+- run `brew install aws-sam-cli` if you get `sh: sam: command not found`

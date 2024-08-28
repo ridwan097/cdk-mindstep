@@ -3,10 +3,9 @@
     "target": "ES2020",
     "module": "commonjs",
     "lib": ["es2020", "dom"],
-    "resolveJsonModule": true,
     "declaration": true,
-    "strict": true,
     "checkJs": false,
+    "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -19,13 +18,15 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"]
+    "outDir": "./built",
+    "esModuleInterop": true
   },
   "exclude": [
-    "node_modules",
     "cdk.out",
     "./plugins/**/*",
     "./typings/**/*",
-    "./built/**/*"
-  ]
+    "./built/**/*",
+    "node_modules"
+  ],
+  "include": ["lib/**/*", "bin/**/*"]
 }
