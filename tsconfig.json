@@ -2,12 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
+    "resolveJsonModule": true,
     "declaration": true,
     "strict": true,
+    "checkJs": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -20,12 +19,13 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "typeRoots": ["./node_modules/@types"]
   },
   "exclude": [
     "node_modules",
-    "cdk.out"
+    "cdk.out",
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./built/**/*"
   ]
 }

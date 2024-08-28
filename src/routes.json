@@ -1,0 +1,19 @@
+{
+  "register": {
+    "path": "invisibility.ts",
+    "endPoint": "invisibility",
+    "method": "POST"
+  },
+  "getinvisibilityDetails": {
+    "path": "invisibility.ts",
+    "endPoint": "invisibility",
+    "method": "GET",
+    "params": "invisibilityID"
+  },
+  "updateinvisibilityDetails": {
+    "path": "invisibility.ts",
+    "endPoint": "invisibility",
+    "method": "PATCH",
+    "params": "invisibilityID"
+  }
+}
