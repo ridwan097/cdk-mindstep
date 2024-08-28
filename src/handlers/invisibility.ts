@@ -2,12 +2,15 @@ import CalculateScore from '../lib/InvisibilityEvents';
 
 async function handler(event: any) {
   try {
-    let calculate = new CalculateScore();
+    const calculate = new CalculateScore();
+
     switch (event.httpMethod) {
       case 'POST':
         return await calculate.register(event);
+
       case 'GET':
         return await calculate.get(event);
+
       case 'PATCH':
         return await calculate.update(event);
       //   case 'DELETE':
@@ -17,7 +20,7 @@ async function handler(event: any) {
         return {
           statusCode: 404,
           headers: { 'Content-Type': 'application/json' },
-          body: 'Not Found',
+          body: JSON.stringify({ message: 'Method not found' }),
         };
     }
   } catch (e) {
@@ -25,7 +28,7 @@ async function handler(event: any) {
     return {
       statusCode: 500,
       headers: { 'Content-Type': 'application/json' },
-      body: e,
+      body: e.toString(),
     };
   }
 }
