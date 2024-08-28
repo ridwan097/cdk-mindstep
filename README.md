@@ -1,4 +1,20 @@
-# Welcome to your CDK TypeScript project
+# Steps to run
+
+- `npm install-all` after cloning
+- open docker or equivalent (orbstack)
+- `npm run local` run this with your docker open
+
+## Troubleshooting
+
+- run `brew install aws-sam-cli` if you get `sh: sam: command not found`
+
+## Future changes
+
+- Add nodemon
+- Add Test
+- Add swagger docsss
+
+## Welcome to your CDK TypeScript project
 
 This is a blank project for CDK development with TypeScript.
 
@@ -16,7 +32,3 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 ## Project generation
 
 - Initialize the project `cdk init app --language typescript`
-
-## Troubleshooting
-
-- run `brew install aws-sam-cli` if you get `sh: sam: command not found`

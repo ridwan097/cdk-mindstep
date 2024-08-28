@@ -14,7 +14,8 @@
     "cdk:synth": "cdk synth",
     "local": "npx tsc && npx aws-cdk synth && sam local start-api -t ./cdk.out/CdkMindstepStack.template.json",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc"
+    "build": "npm run clean && tsc",
+    "install-all": "npm install && cd src && npm install && cd .."
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.132",
